@@ -1,0 +1,102 @@
+* {
+    padding:0;
+    margin:0;
+    transition: all 0.5s;
+}
+
+body {
+    font-family:  sans-serif;
+    font-size: 14px;
+}
+/** Home Image **/
+.img_slider{
+    position:relative;
+    background-image:url("images/background1.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+}
+/** Navbar container it has all the navbar elements **/
+.navbar{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    padding:10px 0;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.navbar-container{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:0 20px;
+}
+
+
+/** NavBar elements **/
+/***** Logo *********/
+.navbar-logo{
+    text-decoration: none; /** remove link decoration **/
+}
+.logo-img{
+    width: 	200px;
+}
+/** list elements **/
+.navbar-nav{
+
+    list-style: none;
+    display: flex;
+}
+
+.nav-item{
+    margin-right: 80px;
+}
+.nav-link{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+/** Button join us **/
+.join-button{
+    background-color:#009CFE ;
+    color: white;
+    padding: 10px 20px;
+    border:none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+/*** Description Box ***/
+.description-box{
+    position: absolute;
+    bottom: 100px;
+    left:200px;
+    color:white;
+}
+.description{
+    font-size: 30px;
+    font-weight: bold;
+}
+.console-plus{
+    color:#FFB83C;
+}
+
+/** Discover More Button **/
+.discover-button{
+    background-color:#D51062 ;
+    color: white;
+    padding: 10px 20px;
+    border:none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor:pointer;
+    margin-top: 20px;
+}
+
+.discover-button :hover{
+    transform: scale(1,1);
+    box-shadow: 4px 0px 32px 2px rgb(255, 255, 255);
+}
