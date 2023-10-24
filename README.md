@@ -1,7 +1,6 @@
 ## Console Plus - A Sample Website
 Console Plus is a simple HTML and CSS template for a fictional gaming website. This repository contains the source code for the website. You can use this as a starting point for your web development projects or as a reference to understand the structure of a basic web page.
 
-## Console Plus Screenshot
 
 ## Features
 Responsive design for various screen sizes.
@@ -19,11 +18,10 @@ Responsive Design: Ensures the website works on various devices and screen sizes
 
 ## How to Use
 Clone this repository to your local machine using Git:
-
-bash
-Copy code
+# Copy code
 git clone https://github.com/yourusername/console-plus.git
 Open the index.html file in your web browser to view the website locally.
+## Console Plus Screenshot
 
 ## Customization
 Modify the content in index.html to make the website your own.
