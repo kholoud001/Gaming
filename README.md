@@ -23,6 +23,16 @@ git clone https://github.com/yourusername/console-plus.git
 Open the index.html file in your web browser to view the website locally.
 ## Console Plus Screenshot
 
+![](/images/Screenshot_home.png)
+![](/images/Screenshot_gamenews.png)
+![](/images/Screenshot_gamenews1.png)
+![](/images/Screenshot_gamenews2.png)
+![](/images/Screenshot_reviews.png)
+![](/images/Screenshot_last.png)
+
+
+
+
 ## Customization
 Modify the content in index.html to make the website your own.
 Customize the styles in style.css to match your branding and design.
