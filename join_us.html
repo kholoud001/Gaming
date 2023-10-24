@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console plus</title>
+    <link rel="stylesheet"  href="style.css"/>
+    <title> Game news </title>
+</head>
+<body>
+<!-- NavBar and logo -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <a class=" navbar-logo" href="index.html">
+            <img  src="images/logo-cnsole1.png" alt="logo" class="logo-img">
+        </a>
+        <ul class="navbar-nav ">
+            <li class="nav-item"> <a class="nav-link" href="index.html" >Home</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="game_news.html" >  Game News</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="reviews.html" >Reviews</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="magazines.html" >Magazines</a> </li>
+        </ul>
+        <button class="join-button" > <a class="join-link" href="#joinus"> Join Us </a></button>
+    </div>
+</nav>
+<!--NavBar End -->
+
+<!--Mobile NavBar Start-->
+<div class="mobile-menu">
+    <div class="menu-icon">
+
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <ul class="mobile-menu-items">
+        <li> <a href="index.html" >Home</a> </li>
+        <li> <a href="game_news.html" >Game News</a> </li>
+        <li> <a href="reviews.html" >Reviews</a> </li>
+        <li> <a href="magazines.html" >Magazines</a> </li>
+        <li> <a href="join_us.html" >Join Us</a> </li>
+    </ul>
+</div>
+<!--Mobile NavBar End-->
+
+<main class="main-container">
+    <div class="resize">
+        <!-- Join us  Start-->
+        <div class="join" id="joinus">
+            <div class="join-container">
+                <div class="join-img"></div>
+                <div class="join-form">
+                    <h1 class="join-title"> Join us</h1>
+                    <form id="joinForm">
+                        <div class="username">
+                            <ion-icon name="person"></ion-icon>
+                            <input type="text" id="username" name="username" placeholder="Username" required>
+                        </div>
+                        <div class="password">
+                            <ion-icon name="lock-closed"></ion-icon>
+                            <input type="password" id="password" name="password" placeholder="Password" required><br>
+                        </div>
+                        <button class="submit" type="submit">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <!-- Join us  End-->
+
+    </div>
+
+
+    <footer >
+        <div class="foot">
+            <div class="foot-reactive">
+                <a class=" navbar-logo" href="index.html">
+                    <img  src="images/logo-cnsole1.png" alt="logo" style="width:120px">
+                </a>
+                <div class="icons">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="mailto:youremail@gmail.com" target="_blank">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+            <p class="copy-right">&copy; 2023 Console+. All Right Preserved</p>
+        </div>
+
+    </footer>
+</main>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+    //phone NavBar
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    mobileMenu.addEventListener('click',function () {
+        mobileMenu.classList.toggle('active');
+    });
+</script>
+</body>
+</html>

@@ -2,29 +2,92 @@
     padding:0;
     margin:0;
     transition: all 0.5s;
+    font-family: VALORANT;
 }
 
+@font-face {
+    font-family: VALORANT;
+    src: url("fonts/Valorant.ttf");
+}
 body {
-    font-family:  sans-serif;
+
     font-size: 14px;
 }
-/** Home Image **/
+
+/*** main container  ****/
+.main-container {
+    background-image:url("images/bg.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+}
+
+
+/**** other pages container   ****/
+.resize{
+    margin:10px 80px;
+}
+/** Home Image
+
 .img_slider{
     position:relative;
     background-image:url("images/background1.jpg") ;
     background-repeat: no-repeat;
     background-size: cover;
     height:100vh;
+    width: 100px;
+}**/
+.img_slider {
+    position: relative;
 }
+.img_slider img {
+    display: none;
+    max-width: 100%;
+}
+
+#previous,
+#next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#previous {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /** Navbar container it has all the navbar elements **/
 .navbar{
-    position: absolute;
+    position: fixed;
     right: 0;
     left: 0;
     top: 0;
-    padding:10px 0;
+    padding:5px ;
     z-index: 1000;
     margin-top: 10px;
+    background: transparent;
+    background-color: rgba(5, 8, 14, 0.21);;
+    backdrop-filter: blur(2px);
 }
 
 .navbar-container{
@@ -34,6 +97,67 @@ body {
     padding:0 20px;
 }
 
+/* Mobile elements */
+
+
+
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #006EA3;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.mobile-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.mobile-menu-items {
+    display: none;
+    background-color: #006EA3;
+    
+    top: 60px;
+    right: 0;
+    left: 0;
+}
+
+.mobile-menu.active .mobile-menu-items {
+    display: block;
+    padding: 20px;
+}
+
+.mobile-menu-items li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.mobile-menu-items a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
 
 /** NavBar elements **/
 /***** Logo *********/
@@ -42,6 +166,10 @@ body {
 }
 .logo-img{
     width: 	200px;
+}
+
+.logo-mobile-img{
+    display: none;
 }
 /** list elements **/
 .navbar-nav{
@@ -54,6 +182,11 @@ body {
     margin-right: 80px;
 }
 .nav-link{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+.join-link{
     text-decoration: none;
     color:white;
     font-weight: bold;
@@ -100,3 +233,527 @@ body {
     transform: scale(1,1);
     box-shadow: 4px 0px 32px 2px rgb(255, 255, 255);
 }
+
+
+
+/************************************/
+/**  Titles for pages  **/
+.page-title{
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 2px #009CFE;
+    text-align: center;
+    padding: 100px 0 50px 0;
+}
+
+h1{
+    font-weight: bold;
+    color: white;
+    padding: 50px 50px 30px 50px;
+}
+
+.join-title{
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 2px #D51062;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+/****   Game News Page   ****/
+.container-game{
+    padding: 10px 50px;
+    height:100%;
+}
+.parent {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.box1,
+.box2,
+.box3 {
+    height: 100%;
+    border-radius: 50px;
+    position: relative;
+}
+
+.box1 {
+    background-image: url("images/img1.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    grid-row: 1 / 3;
+}
+
+.box2 {
+    background-image: url("images/img3.jpg");
+    background-size:cover;
+}
+
+.box3 {
+    background-image: url("images/img4.jpg");
+    background-size:cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #009CFE;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+    border-radius: 50px;
+}
+
+.box1:hover .overlay,
+.box2:hover .overlay,
+.box3:hover .overlay
+ {
+    bottom: 0;
+    height: 100%;
+
+}
+
+.game-sections {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+/****** Game sections   ****/
+.transparent-box-section{
+    width: 100%;
+    height:100% ;
+    border-radius: 50px;
+    background-color: rgba(0, 156, 254, 0.3); /* Use rgba to set transparent background */
+    backdrop-filter: blur(10px);
+}
+
+.section-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    max-height: 500px;
+}
+
+.sec1 img {
+    max-width: 450px;
+    height: 90%;
+    margin-top: 50px;
+    border-radius: 50px;
+}
+
+.sec2{
+    margin-top: 50px;
+}
+
+.sec2 p{
+    max-width: 300px;
+    color: white;
+    display: block;
+}
+
+.sec3 img {
+    max-width: 700px;
+    height: 50%;
+    margin-bottom: 50px;
+    border-radius: 50px;
+}
+
+.sec4 p{
+    max-width: 700px;
+    color: white;
+    display: block;
+}
+
+
+
+/*** video container   **/
+.preview-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.video{
+     padding-bottom: 100px;
+}
+
+
+
+/************    Reviews *********/
+.transparent-box{
+    width: 100%;
+    height:100% ;
+    border-radius: 50px;
+    background-color: rgba(141, 44, 90, 0.3); /* Use rgba to set transparent background */
+    backdrop-filter: blur(10px);
+}
+
+.review{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
+}
+/*
+.review1 img{
+    height: 100px;
+    width: 100px;
+}*/
+.review-img{
+    width:300px;
+    height: 200px;
+    background-image: url("images/img2.jpg");
+    background-size:cover;
+    border-radius: 20px;
+
+}
+.review-text{
+    width: 400px;
+    color: white;
+}
+.review-stars{
+    color:gold;
+    font-size: 2em;
+}
+
+.full{
+    text-shadow: -1px -1px 0 gold, 1px -1px 0 gold, -1px 1px 0 gold, 1px 1px 0 gold;
+}
+
+
+/* Style the "Read More" button */
+.read-more-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.review-text-content{
+    max-height: 100px; /* Adjust to the desired height to display initially */
+    overflow: hidden;
+    transition: max-height 0.3s;
+
+}
+/* Expand the review text content when the "Read More" button is clicked */
+.review-text-content.expanded {
+    max-height: none;
+}
+
+
+
+
+ /*********    Magazines part        ******/
+.mag-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.mag1{
+    width: 200px;
+    height: 300px;
+    background-image: url("images/livre1.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.mag1:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 1px 32px 2px rgb(0, 156, 254) inset;
+}
+
+/**************   join us   ***********************/
+
+.join{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.join-container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: rgba(5, 8, 14, 0.4);
+    border: #009CFE;
+    border-radius: 50px;
+    max-width: 600px;
+
+}
+.join-img{
+    width: 300px;
+    height: 250px;
+    background-image: url("images/background3.jpg");
+    background-size:cover;
+    border-radius: 50px;
+}
+
+
+ .join-form {
+     background-color: rgba(5, 8, 14, 0.4);
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+     width: 200px;
+     height: 200px;
+ }
+
+/* Style form elements */
+.join-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+
+#joinForm ion-icon {
+    color: white;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+#joinForm input[type="text"],
+#joinForm input[type="password"] {
+    background-color: rgba(5, 8, 14, 0.6); ;
+    border-color: #FFB83C;
+    border-radius: 50px;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 10px;
+}
+
+/**** submit button  ****/
+.submit{
+    background-color:#D51062 ;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    border-color: #FFB83C;
+    font-weight: bold;
+    cursor:pointer;
+    width: 50%;
+}
+
+
+
+
+/**** footer ****/
+.foot{
+    padding: 60px;
+    background-color: rgba(5, 8, 14, 0.6); /* Use rgba to set transparent background */
+    backdrop-filter: blur(10px);
+
+}
+
+.foot-reactive{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.copy-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+/* ***************************************** **********************************************/
+/****** Media query for phone   *******/
+
+@media(max-width: 450px) {
+
+    *{
+        font-size:10px ;
+    }
+/** Navbar container it has all the navbar elements **/
+
+/* Mobile */
+
+    .navbar {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+    .logo-mobile-img{
+        display: block;
+        padding: 10px;
+        width: 100px;
+    }
+
+    /**** Description home  ***/
+    .description-box{
+        position: absolute;
+        top:80px;
+        left:30px;
+        color:white;
+    }
+    .description{
+        font-size: 10px;
+        font-weight: bold;
+       margin-bottom: -40px;
+    }
+
+    /** Discover More Button **/
+    .discover-button{
+        background-color:#D51062 ;
+        font-size: 8px;
+        color: white;
+        padding: 8px 5px;
+        border:none;
+        border-radius: 50px;
+        cursor:pointer;
+        margin-left: 50px;
+    }
+
+    .container-game{
+            padding: 5px 30px;
+            max-width: 400px;
+    }
+    /****** resize container for pages   *******/
+    .resize {
+        margin: 30px 20px;
+    }
+    /******************   Game News Page   ***********************/
+    .parent {
+        gap:5px;
+    }
+    .box1,
+    .box2,
+    .box3 {
+        height:  70%;
+        border-radius: 0;
+        padding: 30px 10px;
+    }
+
+    .box1 {
+        background-image: url("images/img1.jpg");
+        width: 150px;
+        height: 85%;
+        object-fit: cover;
+    }
+
+    .box2 {
+        background-image: url("images/img3.jpg");
+        object-fit: cover;
+        height: 70%;
+    }
+
+    .box3 {
+        background-image: url("images/img4.jpg");
+        object-fit: cover;
+        height: 70%;
+    }
+
+    .overlay {
+        border-radius: 0;
+    }
+
+
+    /****************     Game sections   **********************/
+    .transparent-box-section {
+        padding-left: 10px;
+    }
+    .sec1 img {
+        width: 100px;
+    }
+    .sec3 img{
+        width: 300px;
+    }
+    .sec2 .sec4{
+        text-align: center;
+    }
+    .video iframe {
+        max-width: 300px;
+    }
+
+
+    /********************    Reviews    ***********************/
+    .review-img{
+        width:100px;
+        height: 80px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 0px;
+    }
+    .review-text{
+        width: 100px;
+        font-size: 5px;
+        font-weight:normal;
+    }
+    .review-stars{
+        width:80px;
+    }
+    /* Style the "Read More" button */
+    .read-more-button {
+        padding: 5px 5px;
+        margin-top: 5px;
+        font-size: 8px;
+    }
+
+
+    /***************** Magazines section ***********/
+    .mag1{
+        width: 100px;
+        height: 100px;
+    }
+
+
+    /************** Join us Form **************/
+    .join-container{
+        max-width: 400px;
+        margin-top: 40px;
+    }
+    .join-img{
+        height: 250px;
+    }
+    /**** Style form elements ****/
+    #joinForm ion-icon {
+        color: white;
+        font-size: 10px;
+    }
+    #joinForm input[type="text"],
+    #joinForm input[type="password"] {
+        max-width: 100px;
+    }
+    /**** submit button  ****/
+    .submit{
+        margin-left: 20px;
+        padding: 5px;
+    }
+
+}
+
