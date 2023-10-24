@@ -18,7 +18,7 @@ Responsive Design: Ensures the website works on various devices and screen sizes
 
 ## How to Use
 Clone this repository to your local machine using Git:
-# Copy code
+### Copy code
 git clone https://github.com/yourusername/console-plus.git
 Open the index.html file in your web browser to view the website locally.
 ## Console Plus Screenshot
