@@ -28,7 +28,8 @@ Open the index.html file in your web browser to view the website locally.
 ![](/images/Screenshot_gamenews1.png)
 ![](/images/Screenshot_gamenews2.png)
 ![](/images/Screenshot_reviews.png)
-![](/images/Screenshot_last.png)
+![](/images/Screenshot_magazines.png)
+![](/images/Screenshot_final.png)
 
 
 
