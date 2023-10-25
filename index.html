@@ -16,7 +16,7 @@
         <img  src="images/logo-cnsole1.png" alt="logo" class="logo-mobile-img">
         <div class="img_slider">
             <img src="images/background1.jpg" alt="background">
-            <img src="images/background2.jpg" alt="background">
+            <img src="images/background3.jpg" alt="background">
             <img src="images/background4.jpg" alt="background">
             <button id="previous"> &lt; </button>
             <button id="next"> &gt;</button>
@@ -42,7 +42,6 @@
         <!--Mobile NavBar Start-->
         <div class="mobile-menu">
             <div class="menu-icon">
-            
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -113,7 +112,9 @@
                     <!-- Review 1 -->
                     <div class="review-img"> </div>
                     <div class="review-text">
-                        <p class="review-text-content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non iaculis sapien. Integer cursus leo in elit aliquam semper. Nulla ac orci eget augue ultricies placerat. <br>Etiam at diam arcu. Phasellus id quam quis ante rutrum molestie. Vivamus maximus, ante nec lobortis mattis, risus nulla posuere arcu, quis euismod sem urna eu ex. <br>Cras et lacus lorem. Nunc ultricies quis dui nec ultrices. Mauris eget ante ligula. Integer imperdiet ut orci non pellentesque. Etiam scelerisque quam at fringilla accumsan.<br></p>
+                        <p class="review-text-content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non iaculis sapien. Integer cursus leo in elit aliquam semper. Nulla ac orci eget augue ultricies placerat.
+                            <br>Etiam at diam arcu. Phasellus id quam quis ante rutrum molestie. Vivamus maximus, ante nec lobortis mattis, risus nulla posuere arcu, quis euismod sem urna eu ex. <br>
+                            Cras et lacus lorem. Nunc ultricies quis dui nec ultrices. Mauris eget ante ligula. Integer imperdiet ut orci non pellentesque. Etiam scelerisque quam at fringilla accumsan.<br></p>
                         <button class="read-more-button">Read More</button>
                     </div>
                     <div class="review-stars"> <!--
@@ -245,24 +246,24 @@
 
     // Function to show the current image
     function showImage(index) {
-        images.forEach((image, i) => {
-            if (i === index) {
-                image.style.display = "block";
+        for (let i = 0; i < images.length; i++) {
+            if (i == index) {
+                images[i].style.display = "block";
             } else {
-                image.style.display = "none";
+                images[i].style.display = "none";
             }
-        });
+        }
     }
 
     // Function to show the next image
     function showNextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
+        currentIndex = (currentIndex + 1) % images.length; //the modulus operator (%) to ensure it loops back to 0 when it reaches the end of the images array.
         showImage(currentIndex);
     }
 
     // Function to start the automatic slider
     function startSlider() {
-        setInterval(showNextImage, 3000); // Change image every 3 seconds (adjust as needed)
+        setInterval(showNextImage, 5000); // Change image every 3 seconds
     }
 
     // Event listener for the next button
@@ -286,19 +287,23 @@
  // Add a click event listener to toggle the review text expansion
     const readMoreButtons = document.querySelectorAll('.read-more-button');
 
-    readMoreButtons.forEach((button) => {
+    for (let i = 0; i < readMoreButtons.length; i++) {
+        const button = readMoreButtons[i];
         button.addEventListener('click', function() {
             const reviewText = button.previousElementSibling;
-            reviewText.classList.toggle('expanded');
 
-            button.textContent = reviewText.classList.contains('expanded') ? 'Read Less' : 'Read More';
+            if (reviewText.classList.contains('expanded')) {
+                reviewText.classList.remove('expanded');
+                button.textContent = 'Read More';
+            } else {
+                reviewText.classList.add('expanded');
+                button.textContent = 'Read Less';
+            }
         });
-    });
-
+    }
 
     //phone NavBar
 
-                
         const mobileMenu = document.querySelector('.mobile-menu');
 
         mobileMenu.addEventListener('click',function () {

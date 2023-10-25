@@ -20,30 +20,34 @@
             <li class="nav-item"> <a class="nav-link" href="reviews.html" >Reviews</a> </li>
             <li class="nav-item"> <a class="nav-link" href="magazines.html" >Magazines</a> </li>
         </ul>
-        <button class="join-button" > <a class="join-link" href="#joinus"> Join Us </a></button>
+        <button class="join-button" > <a class="join-link" href="join_us.html"> Join Us </a></button>
     </div>
 </nav>
 <!--NavBar End -->
-<!--Mobile NavBar Start-->
-<div class="mobile-menu">
-    <div class="menu-icon">
 
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-    <ul class="mobile-menu-items">
-        <li> <a href="index.html" >Home</a> </li>
-        <li> <a href="game_news.html" >Game News</a> </li>
-        <li> <a href="reviews.html" >Reviews</a> </li>
-        <li> <a href="magazines.html" >Magazines</a> </li>
-        <li> <a href="join_us.html" >Join Us</a> </li>
-    </ul>
-</div>
-<!--Mobile NavBar End-->
 
 <!-- container-->
 <main class="main-container">
+    <!--Mobile NavBar Start-->
+
+    <div class="mob">
+        <img  src="images/logo-cnsole1.png" alt="logo" class="logo-mobile-img">
+        <div class="mobile-menu">
+            <div class="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="mobile-menu-items">
+                <li> <a href="index.html" >Home</a> </li>
+                <li> <a href="game_news.html" >Game News</a> </li>
+                <li> <a href="reviews.html" >Reviews</a> </li>
+                <li> <a href="magazines.html" >Magazines</a> </li>
+                <li> <a href="join_us.html" >Join Us</a> </li>
+            </ul>
+        </div>
+    </div>
+    <!--Mobile NavBar End-->
     <div class="resize">
         <!-- Reviews start-->
         <div id="reviews" >
@@ -139,16 +143,22 @@
     // Add a click event listener to toggle the review text expansion
     const readMoreButtons = document.querySelectorAll('.read-more-button');
 
-    readMoreButtons.forEach((button) => {
+    for (let i = 0; i < readMoreButtons.length; i++) {
+        const button = readMoreButtons[i];
         button.addEventListener('click', function() {
             const reviewText = button.previousElementSibling;
-            reviewText.classList.toggle('expanded');
 
-            button.textContent = reviewText.classList.contains('expanded') ? 'Read Less' : 'Read More';
+            if (reviewText.classList.contains('expanded')) {
+                reviewText.classList.remove('expanded');
+                button.textContent = 'Read More';
+            } else {
+                reviewText.classList.add('expanded');
+                button.textContent = 'Read Less';
+            }
         });
-    });
+    }
 
-    //phone NavBar
+    //Mobile NavBar
     const mobileMenu = document.querySelector('.mobile-menu');
 
     mobileMenu.addEventListener('click',function () {
@@ -157,4 +167,4 @@
 
 </script>
 </body>
-</html>l>
+</html>

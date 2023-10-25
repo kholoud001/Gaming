@@ -25,7 +25,8 @@ body {
 
 /**** other pages container   ****/
 .resize{
-    margin:10px 80px;
+    margin:0px 80px 10px 80px;
+
 }
 /** Home Image
 
@@ -42,7 +43,7 @@ body {
 }
 .img_slider img {
     display: none;
-    max-width: 100%;
+    width: 100%;
 }
 
 #previous,
@@ -134,7 +135,6 @@ body {
 .mobile-menu-items {
     display: none;
     background-color: #006EA3;
-    
     top: 60px;
     right: 0;
     left: 0;
@@ -451,8 +451,6 @@ h1{
 .review-text-content{
     max-height: 100px; /* Adjust to the desired height to display initially */
     overflow: hidden;
-    transition: max-height 0.3s;
-
 }
 /* Expand the review text content when the "Read More" button is clicked */
 .review-text-content.expanded {
@@ -490,7 +488,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
+    padding: 80px 0;
 }
 
 .join-container{
@@ -608,10 +606,15 @@ h1{
     .mobile-menu {
         display: block;
     }
+
+    .mob{
+        display: flex;
+    }
     .logo-mobile-img{
-        display: block;
+        display: flex;
         padding: 10px;
         width: 100px;
+
     }
 
     /**** Description home  ***/
@@ -624,7 +627,7 @@ h1{
     .description{
         font-size: 10px;
         font-weight: bold;
-       margin-bottom: -40px;
+        margin-bottom: -40px;
     }
 
     /** Discover More Button **/
@@ -640,12 +643,14 @@ h1{
     }
 
     .container-game{
-            padding: 5px 30px;
+            padding: 20px 30px;
             max-width: 400px;
+            margin-bottom: 10px;
     }
     /****** resize container for pages   *******/
     .resize {
-        margin: 30px 20px;
+
+       margin: 0px 20px 20px 20px;
     }
     /******************   Game News Page   ***********************/
     .parent {
@@ -689,9 +694,14 @@ h1{
     }
     .sec1 img {
         width: 100px;
+
     }
     .sec3 img{
         width: 300px;
+    }
+
+    .sec2 p{
+        padding: 0 10px;
     }
     .sec2 .sec4{
         text-align: center;
@@ -702,6 +712,7 @@ h1{
 
 
     /********************    Reviews    ***********************/
+
     .review-img{
         width:100px;
         height: 80px;
