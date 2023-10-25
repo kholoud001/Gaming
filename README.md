@@ -3,18 +3,18 @@ Console Plus is a simple HTML and CSS template for a fictional gaming website. T
 
 
 ## Features
-Responsive design for various screen sizes.
-A homepage slider with image rotation.
-Navigation bars (both desktop and mobile versions).
-Sections for Game News, Reviews, Magazines, and Join Us.
-Reviews with "Read More" functionality.
-Social media links in the footer.
-Technologies Used
-HTML5: Structured the content and layout of the website.
-CSS3: Styled the website for visual appeal.
-JavaScript: Implemented an image slider and review text expansion.
-Ionicons: Used for social media icons.
-Responsive Design: Ensures the website works on various devices and screen sizes.
+Responsive design for various screen sizes.<br>
+A homepage slider with image rotation.<br>
+Navigation bars (both desktop and mobile versions).<br>
+Sections for Game News, Reviews, Magazines, and Join Us.<br>
+Reviews with "Read More" functionality.<br>
+Social media links in the footer.<br>
+## Technologies Used
+HTML5: Structured the content and layout of the website.<br>
+CSS3: Styled the website for visual appeal.<br>
+JavaScript: Implemented an image slider and review text expansion.<br>
+Ionicons: Used for social media icons.<br>
+Responsive Design: Ensures the website works on various devices and screen sizes (Laptotp, Tablet, Mobile).<br>
 
 ## How to Use
 Clone this repository to your local machine using Git:
